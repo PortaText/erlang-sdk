@@ -1,14 +1,10 @@
 -module(portatext).
 
 %% API exports
--export([config_get/2]).
 
 %%====================================================================
 %% API functions
 %%====================================================================
-
-config_get(Key, Default) ->
-  application:get_env(portatext, Key, Default).
 
 %%====================================================================
 %% Internal functions
