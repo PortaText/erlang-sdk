@@ -25,4 +25,3 @@ coveralls:
 
 edoc:
 	${REBAR} edoc skip_deps=true
-	${REBAR} doc skip_deps=true
