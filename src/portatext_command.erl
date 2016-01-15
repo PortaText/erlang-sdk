@@ -1,29 +1,38 @@
--module(portatext_config).
+-module(portatext_command).
 -author("marcelog@portatext.com").
 -github("https://github.com/portatext/erlang-sdk").
 -license("Apache-2.0").
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Include files.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-include("portatext.hrl").
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Exports.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
--export([request_backend/0]).
--export([ibrowse_options/0]).
--export([base_url/0]).
+-export([get/1, post/1, patch/1, put/1, delete/1]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Public API.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-request_backend() ->
-  value_for(request_backend, portatext_ibrowse).
+get(Command) ->
+  run(get, Command).
 
-ibrowse_options() ->
-  value_for(ibrowse_options, []).
+post(Command) ->
+  run(post, Command).
 
-base_url() ->
-  value_for(base_url, "https://rest.portatext.com").
+patch(Command) ->
+  run(patch, Command).
+
+put(Command) ->
+  run(put, Command).
+
+delete(Command) ->
+  run(delete, Command).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Private API.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-value_for(Key, Default) ->
-  application:get_env(portatext, Key, Default).
+run(Method, Command) ->
+  ok.
