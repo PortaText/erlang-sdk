@@ -1,0 +1,18 @@
+{application, portatext, [
+  {description, "PortaText Erlang SDK"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+    kernel,
+    stdlib,
+    ibrowse
+  ]},
+  {env,[]},
+  {modules, [
+    portatext,
+    portatext_http
+  ]},
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
