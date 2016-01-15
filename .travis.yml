@@ -6,5 +6,5 @@ otp_release:
   - 18.0
   - 18.2
 
-script:
-  - make
+before_script: "make compile"
+script: "make"
