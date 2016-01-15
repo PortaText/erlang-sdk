@@ -21,8 +21,5 @@ ibrowse_options() ->
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Private API.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-value_for(Key) ->
-  value_for(Key, undefined).
-
 value_for(Key, Default) ->
   application:get_env(portatext, Key, Default).
