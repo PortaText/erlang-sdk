@@ -9,7 +9,10 @@
     inets,
     ibrowse
   ]},
-  {env,[]},
+  {env,[
+    {request_backend, portatext_ibrowse},
+    {ibrowse_options, []}
+  ]},
   {modules, [
     portatext,
     portatext_client,
