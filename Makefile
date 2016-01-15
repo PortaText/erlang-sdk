@@ -1,6 +1,6 @@
 REBAR?=./rebar3
 
-all: compile xref tests cover
+all: compile xref tests cover coveralls
 
 shell:
 	${REBAR} shell
