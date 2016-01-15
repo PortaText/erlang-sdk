@@ -16,3 +16,6 @@ cover:
 
 xref:
 	${REBAR} xref
+
+coveralls:
+	${REBAR} coveralls send
