@@ -1,9 +1,9 @@
-erlang-sdk
-==========
+# erlang-sdk
 
-An OTP library
 
-Build
------
+# Build
 
-    $ rebar3 compile
+
+```
+$ make
+```
