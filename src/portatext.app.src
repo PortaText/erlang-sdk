@@ -5,14 +5,21 @@
   {applications, [
     kernel,
     stdlib,
+    ssl,
+    inets,
     ibrowse
   ]},
   {env,[]},
   {modules, [
     portatext,
-    portatext_http
+    portatext_client,
+    portatext_config,
+    portatext_ibrowse
   ]},
-  {maintainers, []},
-  {licenses, []},
-  {links, []}
- ]}.
+  {maintainers, ["Marcelo Gornstein <marcelog@portatext.com>"]},
+  {licenses, ["Apache-2.0"]},
+  {links, [
+    {"GitHub", "https://github.com/portatext/erlang-sdk"},
+    {"Homepage", "https://www.portatext.com/"}
+  ]}
+]}.
