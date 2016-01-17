@@ -6,7 +6,7 @@
 [![Issue Count](https://codeclimate.com/github/PortaText/erlang-sdk/badges/issue_count.svg)](https://codeclimate.com/github/PortaText/erlang-sdk)
 
 # erlang-sdk
-
+This is still a work in progress and not ready for production yet. Please be patient! :)
 
 # Build
 
